@@ -1,0 +1,38 @@
+.nav-bar{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  background-color: #17171A;
+  color: white;
+}
+select{
+  padding: 8px;
+  border-radius: 3px;
+  margin: 10px;
+}
+.product-card{
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px;
+  margin: 15px;
+  height: 250px;
+  background-color: #17171A;
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.image-div{
+  height: 100%;
+  width: 50%;
+}
+.image-div img{
+  height: 100%;
+  width: 350px;
+  object-fit: cover;
+}
+.details p{
+  font-weight: 600;
+  font-size: 20px;
+}
