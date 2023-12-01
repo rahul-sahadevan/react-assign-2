@@ -1,7 +1,14 @@
 import { useEffect, useState } from "react"
 import { useDispatch } from "react-redux";
-import { ascendingOrder, descendingOrder, filterProduct, sortByRating, withoutSorting } from "../redux/action/productsSlice";
 import productFetch from "../redux/function/productsFunction";
+
+import { ascendingOrder, 
+    descendingOrder, 
+    filterProduct, 
+    sortByRating, 
+    withoutSorting 
+} from "../redux/action/productsSlice";
+
 
 
 function Navbar(){
@@ -9,6 +16,7 @@ function Navbar(){
     const[filter,setFiler] = useState('All');
     const dispatch = useDispatch();
 
+    // function to handle sorting--------------
     function handleSort(){
         if(sort === 'Low-High'){
             dispatch(ascendingOrder())
@@ -24,15 +32,19 @@ function Navbar(){
         }
     }
 
+    // function to handle filter---------------
     function handleFilter(){
         dispatch(filterProduct(filter))
     }
 
-    useEffect(()=>{
+   
+
+    useEffect(()=>{   
         handleSort()
         handleFilter()
     },[sort,filter])
 
+    // nav bar-----------------
     return (
         <div className="nav-bar">
             <h2>E-Commerse</h2>

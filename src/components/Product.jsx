@@ -1,7 +1,7 @@
 
-
+// component for product card------------
 function Product({product}){
-    console.log(product)
+    // console.log(product)
 
     return (
         <div className="product-card">
